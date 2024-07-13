@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This a website that allows users to visualize the expression of genes and enrichment of serveral kinds of pathways. ChemicalDB contains single cell RNA sequencing (scRNAseq) data from the EndoC-βH1 cell line, an immortalized human β-cell line, treated with 46 different hormones from our in-house hormone screening library.
+This is a website that allows users to visualize the expression of genes and enrichment of serveral kinds of pathways. ChemicalDB contains single cell RNA sequencing (scRNAseq) data from the EndoC-βH1 cell line, an immortalized human β-cell line, treated with 46 different hormones from our in-house hormone screening library.
 
 **Current datasets:**
 
