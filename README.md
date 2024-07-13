@@ -38,12 +38,12 @@ This website also requires some python packages, which can be installed with:
 pip install myHttp mySecrets myBasics openai PyMuPDF
 ```
 
-### Step 3: Do configurations
+### Step 3: do configurations
 
 1. In [webserver/main.py](webserver/main.py), line 17, set the port you want to use.
 2. In [webserver/ai2.py](webserver/ai2.py), line 15, set your OpenAI API key.
 
-### Step 4: Run the program
+### Step 4: run the program
 
 Go to webserver folder, then run:
 
