@@ -1,0 +1,97 @@
+/* This css is for the navigation for all the pages */
+
+nav {
+    width: 100%;
+}
+
+#nav {
+    display: flex;
+    height: 3vw;
+    justify-content: center;
+    /* align-items: center;
+    justify-items: center; */
+    flex-direction: row;
+    width: 100%;
+}
+
+#nav>a {
+    width: 12.5vw;
+    font-size: 1.2vw;
+    text-align: center;
+    height: 3vw;
+    line-height: 3vw;
+    /* background-color: #e8e8e8; */
+    color: #444;
+    border-right: 0.075vw;
+    border-left: 0.075vw;
+    border-color: #f8f8f8;
+    border-style: solid;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#nav>a:after {
+    content: ''; /* will only display when have content */
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* make the position in the center */
+    width: var(--nav-hover-width, 0%);
+    background-color: rgb(0, 89, 255);
+    height: 0.2vw;
+    /* background-color: #eaecef; */
+    border-radius: 0.1vw;
+    transform: translateX(-50%); /* move left 50%, to make it in the middle */
+}
+
+#nav>a.current:after {
+    content: ''; /* will only display when have content */
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* make the position in the center */
+    width: 100%;
+    height: 0.15vw;
+    background-color: blue;
+    border-radius: 0.1vw;
+    transform: translateX(-50%); /* move left 50%, to make it in the middle */
+}
+
+#nav>a:hover {
+    background-color: rgb(calc(255 - 255 * var(--nav-hover-bg-transparency, 0.02745098)), calc(255 - 255 * var(--nav-hover-bg-transparency, 0.02745098)), calc(255 - 255 * var(--nav-hover-bg-transparency, 0.02745098)));
+    /* box-shadow: 0 8px 12px rgba(255, 255, 255, var(--nav-hover-shadow, 0)), 0 -2px 6px rgba(0, 255, 255, var(--nav-hover-shadow, 0)); */
+    /* box-shadow: 0 6px 9px rgba(255, 255, 255, var(--nav-hover-shadow, 0)), 0 -1.5px 4.5px rgba(0, 255, 255, var(--nav-hover-shadow, 0));
+    transform: translateY(-2px); */
+}
+
+#nav>.current {
+    color: rgb(0, 47, 255);
+    background-color: #e2e2e2 !important;
+}
+
+#nav>a:hover {
+    /* background-color: rgba(255, 255, 255, var(--nav-hover-bg-transparency, 0)); */
+}
+
+#nav>img {
+    height: 100%;
+    display: none;
+}
+
+.blank {
+    flex-grow: 1;
+    display: none;
+}
+
+#title-img {
+    width: 100%;
+    text-align: center;
+    height: 6vw;
+    line-height: 6vw;
+    background-color: cornflowerblue;
+    margin-top: 0.5vw;
+    margin-bottom: 1.5vw;
+    border-radius: 2vw;
+}
+
+* {
+    color: #222;
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link href="/css/html5reset.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/nav.css" rel="stylesheet">
+  <link href="/css/help.css" rel="stylesheet">
+  <script src="/js/consts.js"></script>
+  <script src="/js/nav.js"></script>
+  <script src="/js/help.js"></script>
+  <!-- <link rel="preload" href="/js/consts.js" as="script"> -->
+  <link rel="prefetch" href="/html/index.html">
+  <link rel="prefetch" href="/html/about.html">
+  <link rel="prefetch" href="/html/expression.html">
+  <link rel="prefetch" href="/html/enrichment.html">
+  <link rel="prefetch" href="/html/differential_exp.html">
+  <link rel="prefetch" href="/html/advanced_analysis.html">
+</head>
+
+<body class="help">
+  <header>
+    <nav>
+      <div id="nav">
+        <a href="/html/index.html">Home</a>
+        <a href="/html/expression.html">Expression</a>
+        <a href="/html/enrichment.html">Enrichment</a>
+        <a href="/html/differential_exp.html">Differential Exp</a>
+        <a href="/html/advanced_analysis.html">Advanced Analysis</a>
+        <a href="/html/help.html" class="current">Help</a>
+        <a href="/html/about.html">About</a>
+        <div class="blank"></div>
+        <!-- <img src="/imgs/logo.png"> -->
+      </div>
+    </nav>
+    <div id="title-img">
+      <h1>ChemicalDB</h1>
+    </div>
+  </header>
+  <main>
+    <h1>Tutorials</h1>
+    <p class="section-title">1. Introduction</p>
+    <p class="mytext">
+      Navigation bar is on the top, including home page, expression page, enrichment page, <span class="delete">differential expression page</span>, help page and about page. You can click the corresponding link to enter the page you want to visit.
+    </p>
+    <p class="mytext">
+      <a href="/html/index.html">Home page:</a> The main page of the website, which provides a brief introduction of the website and the database, and a chatting box with our AI assistant.
+    </p>
+    <p class="mytext">
+      <a href="/html/expression.html">Expression page:</a> The page for you to visualize the expression of a single gene, or multiple genes. You can see the violin plot of a single gene, or the comparison of multiple genes in a dot plot.
+    </p>
+    <p class="mytext">
+      <a href="/html/enrichment.html">Enrichment page:</a> This page is to show the enrichment of several pathways, including beta cell pathways, cell death pathways, specific pathways, and also customised pathways with your own gene list.
+    </p>
+    <p class="mytext delete">
+      <a href="/html/differential_exp.html" class="delete">Differential expression page:</a> This page will be changed later.
+    </p>
+    <p class="mytext">
+      <a href="/html/advanced_analysis.html">Advanced analysis page:</a> This page is for you to do the advanced analysis (correlation analysis) for you customized set of genes. 
+    </p>
+    <p class="mytext last">
+      There is also <a href="/html/help.html">Help page</a> and <a href="/html/about.html">About page</a> to show the tutorials and basic information of this website.
+    </p>
+    <p class="section-title">2. Expression</p>
+    <p class="mytext">
+      This page is for you to visualize the expression of a single gene, or multiple genes. You can see the violin plot of a single gene, or the comparison of multiple genes in a dot plot.
+      First you need to select whether you want to see one gene or multiple genes. If you want to see single gene, click "Gene", if you want to see multiple genes, click "Multiple Genes".
+    </p>
+    <img src="/imgs/exp1.png" class="myimg">
+    <p class="sub-title">(1) Single gene</p>
+    <p class="mytext">
+      Input the gene id in the textbox, and then click "Search" button. After several seconds, the violin plot of the gene will be displayed.
+    </p>
+    <p class="mytext">
+      Gene ids should look like INS, TOP2A, PDX1, AL691432.2, etc. (case insensitive) Note that not all gene ids have the expression (can generate the image) here. If that gene doesn't have the expression, it will show an error message.
+    </p>
+    <img src="/imgs/exp2.png" class="myimg">
+    <p class="sub-title">(2) Multiple genes</p>
+    <p class="mytext">
+      You need to input the gene ids in the textbox, separated by space, comma, or new line, and then click "Submit" button. After several seconds, the dot plot of these genes will be displayed.
+    </p>
+    <p class="mytext">
+      Gene ids should look like INS, TOP2A, PDX1, AL691432.2, etc. Here almost all gene ids can generate the image successfully, including the gene ids that don't have the expression.
+    </p>
+    <img src="/imgs/exp3.png" class="myimg">
+    <p class="section-title">3. Enrichment</p>
+    <p class="mytext">
+      This page is to show the enrichment plot of several pathways, including beta cell pathways, cell death pathways, specific pathways, and also customised pathways with your own gene list.
+      First you need to select one of the four options (Beta cell pathways, Cell death pathways, Specific pathways, Customised pathways) on the left side.
+    </p>
+    <img src="/imgs/enrich1.png" class="myimg">
+    <p class="sub-title">(1) Beta cell pathways</p>
+    <p class="mytext">
+      Click "Select a pathway" button, and then select a pathway from the dropdown menu. Then click "Submit", the enrichment of it will be displayed later.
+    </p>
+    <img src="/imgs/enrich2.png" class="myimg">
+    <p class="sub-title">(2) Cell death pathways</p>
+    <p class="mytext">
+      Click "Select a pathway" button, and then select a pathway from the dropdown menu. Then click "Submit", the enrichment of it will be displayed later.
+    </p>
+    <img src="/imgs/enrich3.png" class="myimg">
+    <p class="sub-title">(3) Specific pathways</p>
+    <p class="mytext">
+      Click "Select a pathway" button, and then select a pathway from the dropdown menu. You can also type in the textbox to search for the pathway name.
+      Then click "Submit", the enrichment of it will be displayed later.
+    </p>
+    <img src="/imgs/enrich4.png" class="myimg">
+    <p class="sub-title">(4) Customised pathways</p>
+    <p class="mytext">
+      In this part, a pathway is constructed by a set of genes. You can use several genes to define your own pathway. But note that not all combinations of genes are valid, and you need to input at least 5 genes.
+    </p>
+    <p class="mytext">
+      Input the gene ids in the textbox, separated by space, comma, or new line, 
+      and then click "Submit" button. 
+      Gene ids should look like INS, TOP2A, PDX1, AL691432.2, etc. (case insensitive)
+      After several seconds, the enrichment of these genes will be displayed.
+    </p>
+    <p class="mytext">
+      When you are typing, it will show how many of your inputted genes are valid, like the following image, you can only submit if all of them are valid.
+    </p>
+    <img src="/imgs/enrich5.png" class="myimg">
+    <p class="section-title">4. Advanced Analysis</p>
+    <p class="mytext">
+      This page is to do the correlation analysis for a set of genes.
+    </p>
+    <p class="mytext">
+      Input the gene ids in the textbox, separated by space, comma, or new line, 
+      and then click "Launch" button. 
+      Gene ids should look like INS, TOP2A, PDX1, AL691432.2, etc. (case insensitive)
+      After several seconds, the enrichment of these genes will be displayed.
+    </p>
+    <p class="mytext">
+      When you are typing, it will show how many of your inputted genes are valid, like the following image, you can only submit if all of them are valid.
+    </p>
+    <img src="/imgs/aa2.png" class="myimg">
+    <!-- <p class="section-title">5. Home page (chatting area)</p> -->
+
+
+
+  </main>
+  <footer>
+    <p>
+      Copyright &copy; XXX 2024 All rights reserved.
+    </p>
+  </footer>
+</body>
+
+</html>

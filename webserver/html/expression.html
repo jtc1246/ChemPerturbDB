@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expression</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link href="/css/html5reset.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/nav.css" rel="stylesheet">
+  <link href="/css/expression.css" rel="stylesheet">
+  <link href="/css/ex2.css" rel="stylesheet">
+  <link href="/css/export.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <script src="/js/nav.js"></script>
+  <script src="/js/consts.js"></script>
+  <script src="/js/expression.js"></script>
+  <link rel="prefetch" href="/html/index.html">
+  <link rel="prefetch" href="/html/about.html">
+  <link rel="prefetch" href="/html/help.html">
+  <link rel="prefetch" href="/html/enrichment.html">
+  <link rel="prefetch" href="/html/differential_exp.html">
+  <link rel="prefetch" href="/html/advanced_analysis.html">
+</head>
+
+<body class="expression" style="display:none;">
+  <div id="export">
+    <a class="export-item" id="export-png">Export as PNG</a>
+    <a class="export-item" id="export-pdf">Export as PDF</a>
+  </div>
+  <header>
+    <nav>
+      <div id="nav">
+        <a href="/html/index.html">Home</a>
+        <a href="/html/expression.html" class="current">Expression</a>
+        <a href="/html/enrichment.html">Enrichment</a>
+        <a href="/html/differential_exp.html">Differential Exp</a>
+        <a href="/html/advanced_analysis.html">Advanced Analysis</a>
+        <a href="/html/help.html">Help</a>
+        <a href="/html/about.html">About</a>
+        <div class="blank"></div>
+        <!-- <img src="/imgs/logo.png"> -->
+      </div>
+    </nav>
+    <div id="title-img">
+      <h1>ChemicalDB</h1>
+    </div>
+  </header>
+  <main>
+    <div id="selection">
+      <label class="two-one"> <!-- the usage of label is to make the whole area selectable -->
+        <div class="b1"></div>
+        <input class="two-one" type="radio" name="option" value="Gene" id="to-gene-button">
+        <div class="b2"></div>
+        <p class="sel-text">Gene</p>
+      </label>
+      <div class="b3"></div>
+      <label class="two-one" id="geneset-label">
+        <input class="two-one" type="radio" name="option" value="Geneset" id="to-geneset-button">
+        <div class="b4"></div>
+        <p class="sel-text">Geneset</p>
+      </label>
+      <div class="b3" id="after-geneset"></div>
+      <label class="two-one">
+        <input class="two-one" type="radio" name="option" value="Geneset" id="to-multigene-button">
+        <div class="b4"></div>
+        <p class="sel-text">Multiple Genes</p>
+      </label>
+      <div class="b5"></div>
+      <div id="gene-input">
+        <p id="gititle">Gene Symbol</p>
+        <div id="input-search">
+          <input type="text" id="gene-textbox" placeholder="TBK1">
+          <button id="search">Search</button>
+        </div>
+        <p id="input-note">
+          Please input gene symbol of Ensembl ID
+        </p>
+      </div>
+      <div id="geneset-input">
+        <!-- The choice of geneset -->
+        <div id="dropdown-wrapper">
+          <div id="dropdown3">
+            <button id="dropdown3-button">
+              <p>Choose your geneset</p>
+              <div id="triangle-down"></div>
+            </button>
+            <div id="dropdown3-content">
+              <a id="bcp-button">Beta cell proliferation</a>
+              <a id="bcf-button">Beta cell function</a>
+              <a id="bci-button">Beta cell identity</a>
+            </div>
+          </div>
+        </div>
+        <p id="geneset-text">No geneset selected</p>
+        <button id="geneset-search">Submit</button>
+      </div>
+      <div id="multi-input">
+        <textarea id="pathway-textbox" placeholder="Your gene IDs here"></textarea>
+        <button id="launch">Submit</button>
+        <div id="msg-wrapper">
+          <p id="input-msg"></p>
+        </div>
+      </div>
+    </div>
+    <p id="error-msg"></p>
+    <div id="results">
+      <div id="left" style="width:99%;">
+        <img id="left-img" src="">
+      </div>
+      <div id="empty" style="width:0;"></div>
+      <div id="right" style="width:0;">
+        <img id="right-img" src="">
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>
+      Copyright &copy; XXX 2024 All rights reserved.
+    </p>
+  </footer>
+</body>
+
+</html>

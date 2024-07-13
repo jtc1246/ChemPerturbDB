@@ -1,0 +1,142 @@
+#selection {
+    height: 2vw;
+    padding-bottom: 0.5vw;
+}
+
+label.two-one {
+    height: 100%;
+}
+
+#title-text {
+    font-size: 1.5vw;
+    line-height: 2vw;
+}
+
+.sel-text {
+    font-size: 1.5vw !important;
+}
+
+#geneset-input {
+    /* display: block; */
+    height: 5vw;
+    display: none;
+    /* background-color: yellow; */
+}
+
+#geneset-input.uc {
+    display: block;
+}
+
+#ph {
+    display: block;
+    height: 5vw;
+    width: 100%;
+    display: none;
+}
+
+#tmp {
+    width: 100%;
+    height: 50vw;
+}
+
+#chemical-wrapper.uc {
+    /* left: 11.5vw; */
+    left: 6vw;
+}
+
+#chemical-text.uc {
+    top: 2.5vw;
+    /* left: 13.5vw; */
+    left: 8vw;
+}
+
+#selection.cutoff {
+    height: 2vw;
+    padding-bottom: 2vw;
+}
+
+#selection.cutoff > * {
+    font-size: 1.25vw;
+    line-height: 2vw;
+}
+
+#selection.cutoff > div {
+    height: 100%;
+}
+
+#t1 {
+    font-size: 1.5vw !important;
+}
+
+#e1, #e3 {
+    width: 2vw;
+}
+
+#e2, #e4 {
+    width: 0.5vw;
+}
+
+#selection.cutoff > input {
+    height: 2vw;
+    box-sizing: border-box;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    caret-color: #3478F6;
+    border: 0.15vw solid #686868;
+    border-radius: 0.5vw;
+    padding-left: 0.5vw;
+    width: 10vw;
+    height: 100%;
+    font-size: 1.125vw;
+}
+
+#submit-wrapper {
+    width: 0;
+    height: 0;
+}
+
+#submit {
+    font-size: 1.25vw;
+    height: 2.5vw;
+    line-height: 2.5vw;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    width: 6vw;
+    border-radius: 0.75vw;
+    background-color: #0037fe;
+    color: #fff;
+}
+
+#submit:hover {
+    cursor: pointer;
+    background-color: #2252ff;
+}
+
+#submit:active {
+    background-color: #3c65f9;
+}
+
+#error-msg{
+    margin-top: 0.5vw;
+    /* background-color: yellow; */
+    width: 24vw;
+    height: 5vw;
+    margin-left: -9vw;
+    text-align: center;
+    padding-left: 0;
+    padding-bottom: 0;
+    overflow: visible;
+    line-height: 1.2;
+}
+
+#left, #right {
+    width: 48%;
+    /* background-color: yellow; */
+}
+
+label.two-one:hover {
+    cursor: text !important;
+}

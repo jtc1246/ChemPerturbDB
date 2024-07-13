@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enrichment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link href="/css/html5reset.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/nav.css" rel="stylesheet">
+  <link href="/css/enrichment.css" rel="stylesheet">
+  <link href="/css/enrich3.css" rel="stylesheet">
+  <link href="/css/enrich2.css" rel="stylesheet">
+  <link href="/css/export.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <script src="/js/nav.js"></script>
+  <script src="/js/consts.js"></script>
+  <script src="/js/enrichment.js"></script>
+  <link rel="prefetch" href="/html/index.html">
+  <link rel="prefetch" href="/html/about.html">
+  <link rel="prefetch" href="/html/help.html">
+  <link rel="prefetch" href="/html/expression.html">
+  <link rel="prefetch" href="/html/differential_exp.html">
+  <link rel="prefetch" href="/html/advanced_analysis.html">
+</head>
+
+<body class="enrichment" style="display:none;">
+  <div id="export">
+    <a class="export-item" id="export-png">Export as PNG</a>
+    <a class="export-item" id="export-pdf">Export as PDF</a>
+  </div>
+  <header>
+    <nav>
+      <div id="nav">
+        <a href="/html/index.html">Home</a>
+        <a href="/html/expression.html">Expression</a>
+        <a href="/html/enrichment.html" class="current">Enrichment</a>
+        <a href="/html/differential_exp.html">Differential Exp</a>
+        <a href="/html/advanced_analysis.html">Advanced Analysis</a>
+        <a href="/html/help.html">Help</a>
+        <a href="/html/about.html">About</a>
+        <div class="blank"></div>
+        <!-- <img src="/imgs/logo.png"> -->
+      </div>
+    </nav>
+    <div id="title-img">
+      <h1>ChemicalDB</h1>
+    </div>
+  </header>
+  <main id="main">
+    <div id="selection">
+      <div id="blank"></div>
+      <div class="menu-items" id="beta"><p>Beta cell specific<br>pathways</p></div>
+      <div class="menu-items" id="death"><p>Cell death<br>pathways</p></div>
+      <div class="menu-items" id="specific"><p>Specific<br>pathways</p></div>
+      <div class="menu-items" id="customized"><p>Customized<br>pathways</p></div>
+      <div id="nothing"></div>
+    </div>
+    <div id="ph"></div>
+    <div id="input-area">
+      <p id="title"></p>
+      <div id="b1" class="dropdown">
+        <button id="b1-button" class="dropdown-button">
+          <p>Select a pathway</p>
+          <div id="triangle-down"></div>
+        </button>
+        <div id="b1-content" class="dropdown-content">
+          <a id="bcp">Beta cell proliferation</a>
+          <a id="bcf">Beta cell function</a>
+          <a id="bci">Beta cell identity</a>
+        </div>
+      </div>
+      <div id="b2" class="dropdown">
+        <button id="b2-button" class="dropdown-button">
+          <p>Select a pathway</p>
+          <div id="triangle-down"></div>
+        </button>
+        <div id="b2-content" class="dropdown-content">
+          <a id="d1">Apoptosis</a>
+          <a id="d2">Autophagy</a>
+          <a id="d3">Ferroptosis Signaling Pathway</a>
+          <a id="d4">Necroptosis</a>
+          <a id="d5">Pyroptosis Signaling Pathway</a>
+          <!-- <a id="d6">Hormone</a>
+          <a id="d7">Sample</a> -->
+        </div>
+      </div>
+      <div id="geneset-input" class="uc">
+        <div id="chemical-wrapper" class="uc">
+          <div id="chemical">
+            <button id="chemical-button">
+              <p>Select a pathway</p>
+              <div id="triangle-down"></div>
+            </button>
+            <div id="chemical-content">
+              <div id="chemical-input-wrapper">
+                <input type="text" id="chemical-textbox" placeholder="">
+              </div>
+              <p id="no-results">No results found</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="dropdown-text" id="bc-text">No pathway selected</p>
+      <p class="dropdown-text" id="d-text">No pathway selected</p>
+      <p class="dropdown-text" id="s-text">No pathway selected</p>
+      <textarea id="pathway-textbox" placeholder="Your gene IDs here"></textarea>
+      <p id="input-msg"></p>
+      <button id="launch">Submit</button>
+      <p id="error-msg"></p>
+    </div>
+    <div id="img-wrapper">
+      <img id="middle-img" src="">
+    </div>
+  </main>
+  <footer>
+    <p>
+      Copyright &copy; XXX 2024 All rights reserved.
+    </p>
+  </footer>
+</body>
+
+</html>

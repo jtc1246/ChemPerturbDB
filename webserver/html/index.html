@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link href="/css/html5reset.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/nav.css" rel="stylesheet">
+  <link href="/css/home.css" rel="stylesheet">
+  <link href="/css/export.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <script src="/js/nav.js"></script>
+  <script src="/js/home.js"></script>
+  <link rel="preload" href="/js/consts.js" as="script">
+  <link rel="prefetch" href="/html/about.html">
+  <link rel="prefetch" href="/html/help.html">
+  <link rel="prefetch" href="/html/expression.html">
+  <link rel="prefetch" href="/html/enrichment.html">
+  <link rel="prefetch" href="/html/differential_exp.html">
+  <link rel="prefetch" href="/html/advanced_analysis.html">
+</head>
+
+<body class="home" style="display:none;">
+  <div id="full-screen-image">
+    <img src="">
+  </div>
+  <div id="export">
+    <a class="export-item" id="export-png">Export as PNG</a>
+    <a class="export-item" id="export-pdf">Export as PDF</a>
+  </div>
+  <header>
+    <nav>
+      <div id="nav">
+        <a href="/html/index.html" class="current">Home</a>
+        <a href="/html/expression.html">Expression</a>
+        <a href="/html/enrichment.html">Enrichment</a>
+        <a href="/html/differential_exp.html">Differential Exp</a>
+        <a href="/html/advanced_analysis.html">Advanced Analysis</a>
+        <a href="/html/help.html">Help</a>
+        <a href="/html/about.html">About</a>
+        <div class="blank"></div>
+        <!-- <img src="/imgs/logo.png"> -->
+      </div>
+    </nav>
+    <div id="title-img">
+      <h1>ChemicalDB</h1>
+    </div>
+  </header>
+  <main id="main">
+    <div class="left">
+      <h2>Welcome to chemicalDB!</h2>
+      <p id="intro-text">ChemicalDB contains single cell RNA sequencing (scRNAseq) data from the EndoC-βH1 cell line, an immortalized human β-cell line, treated with 46 different hormones from our in-house hormone screening library. We incorporate 10-bp unique barcodes into the EndoC-βH1 line via lentiviral infection and treat each unique barcoded line with a single hormone from our screening library for 48 hours. Libraries were prepared using the Chromium Single Cell 3' v3.1 Chemistry Dual Index platform with Feature Barcoding technology for Cell Multiplexing and sequenced at a depth of 20,000 read pairs per cell. Users are able to analyze the expression of genes of treated cells normalized to their respective controls, visualize the activation/suppression of major pathways, perform geneset enrichment analysis (GSEA) of custom genesets, as well as perform correlation analysis of custom genesets via this platform. More information and tutorials regarding the usage of different modules can be found in the Help section.</p>
+      <h2>Current datasets</h2>
+      <table>
+        <tr>
+          <th class="table-t2" id="hagf">Hormones and Growth Factors</th>
+          <th class="table-t1 table-title">Genes</th>
+          <th class="table-t1 table-title">Cells</th>
+        </tr>
+        <tr>
+          <td class="table-t2">46</td>
+          <td class="table-t1">36627</td>
+          <td class="table-t1">6210</td>
+        </tr>
+      </table>
+      <h2>Publication</h2>
+      <p>
+        andana JJ, Manrique C, Lacko LA, Chen S. Human pluripotent-stem-cell-derived organoids for drug discovery and evaluation. Cell Stem Cell. 2023 May
+        4;30(5):571-591. doi: 10.1016/j.stem.2023.04.011. PMID: 37146581; PMCID: PMC10775018.
+      </p>
+    </div>
+    <div class="empty"></div>
+    <div class="right" id="chatarea">
+      <!-- <h2>Expression Visualization</h2> -->
+      <div id="chat">
+        <div id="chat-title">Chat with AI assistant</div>
+        <div id="chat-messages">
+          <div class="start-end" id="start-line"></div>
+          <div class="start-end" id="end-line"></div>
+        </div>
+        <div id="chat-rcmd">
+          <p class="rcmd-one-line">What is gene INS?</p>
+          <p>Can you show the expression of TOP2A?</p>
+          <p >Who are you, what can you do?</p>
+          <p>What's the function of this website?</p>
+          <p>Give me the enrichment of beta cell identity.</p>
+          <p>The deg analysis of LPT, with p-value 0.2 and FC 0.1</p>
+        </div>
+        <div id="chat-input">
+          <button id="clear-history">Clear History</button>
+          <textarea id="chat-input-text" placeholder="Chat with the AI assistant, ask anything you want to know "></textarea>
+          <button id="chat-send">Send</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>
+      Copyright &copy; XXX 2024 All rights reserved.
+    </p>
+  </footer>
+</body>
+
+</html>

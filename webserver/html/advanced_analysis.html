@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Analysis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link href="/css/html5reset.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/nav.css" rel="stylesheet">
+  <!-- <link href="/css/enrichment.css" rel="stylesheet"> -->
+  <link href="/css/aa.css" rel="stylesheet">
+  <link href="/css/export.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <script src="/js/nav.js"></script>
+  <script src="/js/consts.js"></script>
+  <script src="/js/aa.js"></script>
+  <link rel="prefetch" href="/html/index.html">
+  <link rel="prefetch" href="/html/about.html">
+  <link rel="prefetch" href="/html/help.html">
+  <link rel="prefetch" href="/html/expression.html">
+  <link rel="prefetch" href="/html/enrichment.html">
+  <link rel="prefetch" href="/html/differential_exp.html">
+</head>
+
+<body class="advanced-analysis">
+  <div id="export">
+    <a class="export-item" id="export-png">Export as PNG</a>
+    <a class="export-item" id="export-pdf">Export as PDF</a>
+  </div>
+  <header>
+    <nav>
+      <div id="nav">
+        <a href="/html/index.html">Home</a>
+        <a href="/html/expression.html">Expression</a>
+        <a href="/html/enrichment.html">Enrichment</a>
+        <a href="/html/differential_exp.html">Differential Exp</a>
+        <a href="/html/advanced_analysis.html" class="current">Advanced Analysis</a>
+        <a href="/html/help.html">Help</a>
+        <a href="/html/about.html">About</a>
+        <div class="blank"></div>
+        <!-- <img src="/imgs/logo.png"> -->
+      </div>
+    </nav>
+    <div id="title-img">
+      <h1>ChemicalDB</h1>
+    </div>
+  </header>
+  <main>
+    <p id="pathway-input-title">Implications of Customized Geneset by Chemicals</p>
+    <div id="input-wrapper">
+      <!-- <input type="text" id="pathway-textbox"> -->
+      <textarea id="pathway-textbox" placeholder="Your gene IDs here"></textarea>
+      <button id="launch">Launch</button>
+      <div id="msg-wrapper">
+        <p id="input-msg"></p>
+      </div>
+    </div>
+    <p id="error-msg"></p>
+    <div id="results">
+      <div id="empty1" style="width:10%;"></div>
+      <div id="middle" style="width:70%;">
+        <img id="middle-img" src="">
+      </div>
+      <div id="empty2" style="width:20%;"></div>
+    </div>
+  </main>
+  <footer>
+    <p>
+      Copyright &copy; XXX 2024 All rights reserved.
+    </p>
+  </footer>
+</body>
+
+</html>
