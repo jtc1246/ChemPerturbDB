@@ -1,24 +1,25 @@
-# ChemicalDB
+# ChemPerturbDB
 
 ## Introduction
 
-This is a website that allows users to visualize the expression of genes and enrichment of serveral kinds of pathways. ChemicalDB contains single cell RNA sequencing (scRNAseq) data from the EndoC-βH1 cell line, an immortalized human β-cell line, treated with 46 different hormones from our in-house hormone screening library.
+ChemPerturbDB is an AI-powered, user-friendly, open-access platform for analyzing Chemical Perturb-Seq (ChemPerturb-Seq) data. ChemPerturb-Seq combines chemical screening with single-cell RNA sequencing (scRNA-seq), offering a systematic analysis of cellular responses and molecular changes in human beta cells following individual hormone treatments.
+
+In this website, users can visualize the expression of genes and enrichment of serveral kinds of pathways.
 
 **Current datasets:**
 
-| Hormones and Growth Factors | Genes | Cells |
-| --------------------------- | ----- | ----- |
-| 46                          | 36627 | 6210  |
+| Hormones and Growth Factors | Cells |
+| --------------------------- | ----- |
+| 46                          | 6210  |
 
-Link for demo: [jtc1246.com:9020](http://jtc1246.com:9020/)
+Link: [chemperturbdb.weill.cornell.edu](http://chemperturbdb.weill.cornell.edu/)
 
 ## Functions
 
 1. Show the violin plot of single gene.
 2. Show the dot plot of multiple genes.
-3. Show the enrichment of 4 kinds of pathways: beta cell pathways, cell death pathways, specific pathways, and customized pathways combined with a set of genes.
-4. DEG analysis of hormones. (this may be changed later)
-5. Correlation analysis of genes.
+3. Show the enrichment of 3 kinds of pathways: beta cell pathways, cell death pathways, specific pathways.
+4. Advanced enrichment analysis (the enrichment of customized pathway).
 
 ## Usage
 
@@ -28,7 +29,7 @@ Files needed are listed in [data_files.txt](data_files.txt). But due to size lim
 
 ### Step 2: prepare the environment
 
-This website requires these R packages: Seurat, ggplot2, tidyverse, DESeq2, stringr, EnhancedVolcano, pheatmap, RColorBrewer, viridis, grid, ggplotify, ggpubr, patchwork, dplyr, ComplexHeatmap, clusterProfiler. The installation of these R packages will not be described in this README.
+This website requires these R packages: Seurat, ggplot2, tidyverse, DESeq2, stringr, EnhancedVolcano, pheatmap, RColorBrewer, viridis, grid, ggplotify, ggpubr, patchwork, dplyr, ComplexHeatmap, clusterProfiler, ggh4x. The installation of these R packages will not be described in this README.
 
 You can use the docker at [gitlab.com/jtc1246/bio-website](https://gitlab.com/jtc1246/bio-website).
 
