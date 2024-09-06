@@ -8,7 +8,7 @@
 body {
     margin-left: 0.6vw;
     margin-right: 0.6vw;
-    margin-top: 0.6vw;
+    /* margin-top: 0.6vw; */
 }
 
 footer {
@@ -144,4 +144,27 @@ html {
 
 .firefox {
     scrollbar-width: none;
+}
+
+#intro-text {
+    font-size: 1.5vw;
+    line-height: 1.25;
+    padding-left: 2.5vw;
+    width: 80vw;
+    color: #b700ff;
+    padding-bottom: 1vw;
+}
+
+#intro-text > a {
+    font-size: inherit;
+    color: rgb(0, 0, 255);
+    text-decoration: underline;
+}
+
+#intro-text > a:hover {
+    color: rgb(255, 153, 0);
+}
+
+#intro-text > a:active {
+    color: rgb(217, 132, 4);
 }

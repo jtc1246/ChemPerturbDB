@@ -67,7 +67,7 @@ for js in jses:
 
 for img in imgs:
     tmp = img.lower()
-    if (not tmp.endswith('.png') and not tmp.endswith('.jpg') and not tmp.endswith('.jpeg')):
+    if (not tmp.endswith('.png') and not tmp.endswith('.jpg') and not tmp.endswith('.jpeg')  and not tmp.endswith('.gif')):
         continue
     registered.append(f'/imgs/{img}')
 
@@ -165,6 +165,8 @@ def process_html(request: Request, path: str) -> None:
             html = html.replace(reg, f'data:image/png;base64,{file}')
         if (reg.endswith('.jpg') or reg.endswith('.jpeg')):
             html = html.replace(reg, f'data:image/jpeg;base64,{file}')
+        if (reg.endswith('.gif')):
+            html = html.replace(reg, f'data:image/gif;base64,{file}')
     html = html.encode('utf-8')
     request.send_response(200)
     request.send_header('Connection', 'keep-alive')
@@ -201,7 +203,7 @@ def process_get_api(request: Request, path: str) -> None:
         print(f'API received: gene, {path}')
         path = path.upper()
         file_name = f'tmp-{randint(100000000000, 999999999999)}.pdf'
-        result = violinPlotsingle(path, './tmp/'+file_name)
+        result = violinPlotsingle(GENES_FORMATTED_TO_ORIGIN[path], './tmp/'+file_name)
         if(result[0]):
             png_bytes = pdf_to_png_bytes('../tmp/'+file_name)
             data = {'left': binToBase64(png_bytes), 'right': BLANK_PNG}

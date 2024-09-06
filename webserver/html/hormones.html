@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hormones</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link href="/css/html5reset.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/nav.css" rel="stylesheet">
+  <script src="/js/nav.js"></script>
+  <link rel="preload" href="/js/consts.js" as="script">
+  <link rel="prefetch" href="/html/index.html">
+  <link rel="prefetch" href="/html/about.html">
+  <link rel="prefetch" href="/html/help.html">
+  <link rel="prefetch" href="/html/expression.html">
+  <link rel="prefetch" href="/html/enrichment.html">
+  <link rel="prefetch" href="/html/advanced_analysis.html">
+  <link rel="preconnect" href="https://en.wikipedia.org">
+  <script>const HORMONES_TABLE = [['Adrenocorticotropic hormone', 'ACTH', '10 nM', 'https://en.wikipedia.org/wiki/Adrenocorticotropic_hormone'], ['Aldosterone', '-', '0.1 µM', 'https://en.wikipedia.org/wiki/Aldosterone'], ['Antidiuretic hormone', 'ADH', '0.1 µM', 'https://en.wikipedia.org/wiki/Vasopressin'], ['Anti-müllerian hormone', 'AMH', '50 ng/ml', 'https://en.wikipedia.org/wiki/Anti-Müllerian_hormone '], ['Atrial natriuretic peptide', 'ANP', '0.1 µM', 'https://en.wikipedia.org/wiki/Atrial_natriuretic_peptide'], ['Beta-estradiol', '-', '0.01 µM', 'https://en.wikipedia.org/wiki/Estradiol'], ['Brain natriuretic peptide', 'BNP', '1 µM', 'https://en.wikipedia.org/wiki/Brain_natriuretic_peptide_32'], ['Calcitonin', '-', '0.01 µM', 'https://en.wikipedia.org/wiki/Calcitonin'], ['Cholecystokinin', 'CCK', '0.01 nM', 'https://en.wikipedia.org/wiki/Cholecystokinin'], ['Corticotropin-releasing hormone', 'CRH', '0.01 µM', 'https://en.wikipedia.org/wiki/Corticotropin-releasing_hormone'], ['Dopamine', '-', '10 µM', 'https://en.wikipedia.org/wiki/Dopamine'], ['Endothelin', '-', '1 µM', 'https://en.wikipedia.org/wiki/Endothelin'], ['Enkephalin', '-', '2 µM', 'https://en.wikipedia.org/wiki/Enkephalin'], ['Fibroblast growth factor 21', 'FGF21', '0.1 µg/ml', 'https://en.wikipedia.org/wiki/Fibroblast_growth_factor_21'], ['Follicle-stimulating hormone', 'FSH', '0.01 µg/ml', 'https://en.wikipedia.org/wiki/Follicle-stimulating_hormone'], ['Gastrin', '-', '0.01 µM', 'https://en.wikipedia.org/wiki/Gastrin'], ['Ghrelin', '-', '1 µM', 'https://en.wikipedia.org/wiki/Ghrelin'], ['Glucagon', '-', '0.01 µM', 'https://en.wikipedia.org/wiki/Glucagon'], ['Glucagon-like peptide-1', 'GLP1', '0.01 µM', 'https://en.wikipedia.org/wiki/Glucagon-like_peptide-1'], ['Growth hormone', '-', '0.2 µg/ml', 'https://en.wikipedia.org/wiki/Growth_hormone'], ['Somatostatin', '-', '0.01 µM', 'https://en.wikipedia.org/wiki/Somatostatin'], ['Somatoliberin', '-', '0.1 nM', 'https://en.wikipedia.org/wiki/Growth_hormone–releasing_hormone'], ['Histamine', '-', '0.01 mM', 'https://en.wikipedia.org/wiki/Histamine'], ['Human chorionic gonadotropin', 'HCG', '0.1 µg/ml', 'https://en.wikipedia.org/wiki/Human_chorionic_gonadotropin'], ['Insulin', '-', '0.1 µM', 'https://en.wikipedia.org/wiki/Insulin'], ['Insulin-like growth factor 1', 'IGF-1', '0.1 µg/ml', 'https://en.wikipedia.org/wiki/Insulin-like_growth_factor_1'], ['Irisin', '-', '0.1 µg/ml', 'https://en.wikipedia.org/wiki/FNDC5'], ['Kisspeptin', '-', '1 µM', 'https://en.wikipedia.org/wiki/Kisspeptin'], ['Leptin', '-', '1 ng/ml', 'https://en.wikipedia.org/wiki/Leptin'], ['Lipotropin (β-lipotropin 61–91, β-endorphin)', 'LPT', '0.01 µM', 'https://en.wikipedia.org/wiki/Β-Endorphin'], ['Luteinizing hormone', 'LH', '0.3U/ml', 'https://en.wikipedia.org/wiki/Luteinizing_hormone'], ['Melanocyte stimulating hormone', 'MSH', '0.1 µM', 'https://en.wikipedia.org/wiki/Melanocyte-stimulating_hormone'], ['Melatonin', '-', '1 µM', 'https://en.wikipedia.org/wiki/Melatonin'], ['Orexin A', '-', '1 µM', 'https://en.wikipedia.org/wiki/Orexin-A'], ['Oxytocin', '-', '1 nM', 'https://en.wikipedia.org/wiki/Oxytocin'], ['Parathyroid hormone', 'PTH', '0.01 µM', 'https://en.wikipedia.org/wiki/Parathyroid_hormone'], ['Placental lactogen', '-', '500 ng/ml', 'https://en.wikipedia.org/wiki/Human_placental_lactogen'], ['Pregnenolone', '-', '50 µM', 'https://en.wikipedia.org/wiki/Pregnenolone'], ['Progesterone', '-', '1 µM', 'https://en.wikipedia.org/wiki/Progesterone'], ['Prolactin', '-', '50 ng/ml', 'https://en.wikipedia.org/wiki/Prolactin'], ['Prostaglandin E2', 'PGE2', '10 µM', 'https://en.wikipedia.org/wiki/Prostaglandin_E2'], ['Secretin', '-', '0.01 µM', 'https://en.wikipedia.org/wiki/Secretin'], ['Serotonin (5-HT)', '-', '0.01 mM', 'https://en.wikipedia.org/wiki/Serotonin'], ['Thyroid stimulating hormone', 'TSH', '0.5 µg/ml', 'https://en.wikipedia.org/wiki/Thyroid-stimulating_hormone'], ['Thyrotropin releasing hormone', 'TRH', '0.2 µM', 'https://en.wikipedia.org/wiki/Thyrotropin-releasing_hormone'], ['Gonadotropin-releasing hormone', 'GnRH', '0.1 µM', 'https://en.wikipedia.org/wiki/Gonadotropin-releasing_hormone']]</script>
+  <style>
+    * {
+      border: 0;
+    }
+    #table-container {
+      padding-top: 1vw;
+      width: 60vw;
+      padding-left: 19.4vw;
+    }
+    #main-table {
+      width: 100%;
+    }
+    #main-table * {
+      font-size: 1.25vw;
+      border: 0;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    #main-table th, #main-table td {
+      border: 0.1vw solid black;
+      border-collapse: collapse;
+    }
+    #main-table th {
+      line-height: 2;
+      font-weight: 500;
+      color: rgb(160, 21, 211);
+      padding-left: 0.5vw;
+      padding-right: 0.5vw;
+    }
+    .table-link {
+      font-size: 1.125vw !important;
+      height: 2vw !important;
+      line-height: 2vw !important;
+      white-space: nowrap;
+      width: min-content;
+
+    }
+    .table-link-container {
+      height: 2vw !important;
+    }
+    #main-table td {
+      line-height: 2vw;
+      height: 2vw;
+    }
+    .table-2nd, .table-3rd {
+      text-align: center;
+    }
+    .table-2nd {
+      width: 25%;
+    }
+    .table-3rd {
+      width: 25%;
+    }
+    .table-1st {
+      width: 50%;
+      text-align: center;
+    }
+    .table-link-container {
+      padding-left: 3vw !important;
+      width: 43.5%;
+    }
+    .table-link {
+      color: #3948d2;
+      text-decoration: underline;
+    }
+    .table-link:hover {
+      color: #2190df;
+    }
+  </style>
+</head>
+
+<body class="about">
+  <header>
+    <div id="title-img">
+      <h1>ChemPerturbDB</h1>
+    </div>
+    <nav>
+      <div id="nav">
+        <a href="/html/index.html">Home</a>
+        <a href="/html/hormones.html" class="current">Hormones</a>
+        <a href="/html/expression.html">Expression</a>
+        <a href="/html/enrichment.html">Enrichment</a>
+        <a href="/html/advanced_analysis.html">Adv Enrich Analysis</a>
+        <a href="/html/help.html">Help</a>
+        <a href="/html/about.html">About</a>
+        <div class="blank"></div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div id="table-container">
+      <table id="main-table">
+
+      </table>
+    </div>
+  </main>
+  <footer>
+    <p>
+      Copyright &copy; Chen lab at Weill Cornell Medicine 2024 All rights reserved.
+    </p>
+  </footer>
+</body>
+
+<script>
+  window.addEventListener('DOMContentLoaded', function(){
+    console.log(HORMONES_TABLE.length);
+    const table = document.getElementById('main-table');
+    const table_header = document.createElement('tr');
+    const h1 = document.createElement('th');
+    h1.innerHTML = 'Hormones';
+    const h2 = document.createElement('th');
+    h2.innerHTML = 'Abbreviation';
+    const h3 = document.createElement('th');
+    h3.innerHTML = 'Concentration';
+    // const h4 = document.createElement('th');
+    // h4.innerHTML = 'Wiki Link for more details (Mechanism, etc.)';
+    table_header.appendChild(h1);
+    table_header.appendChild(h2);
+    table_header.appendChild(h3);
+    // table_header.appendChild(h4);
+    table.appendChild(table_header);
+    const table_length = HORMONES_TABLE.length;
+    for (let i = 0; i < table_length; i++) {
+      const row = document.createElement('tr');
+      const cell1 = document.createElement('td');
+      const link = document.createElement('a');
+      link.classList.add('table-link');
+      link.href = HORMONES_TABLE[i][3];
+      link.target = '_blank';
+      link.innerHTML = HORMONES_TABLE[i][0];
+      cell1.appendChild(link);
+      // cell1.innerHTML = HORMONES_TABLE[i][0];
+      cell1.classList.add('table-1st')
+      const cell2 = document.createElement('td');
+      cell2.innerHTML = HORMONES_TABLE[i][1];
+      cell2.classList.add('table-2nd')
+      const cell3 = document.createElement('td');
+      cell3.innerHTML = HORMONES_TABLE[i][2];
+      cell3.classList.add('table-3rd')
+      // const cell4 = document.createElement('td');
+      // cell4.classList.add('table-link-container');
+      // const link = document.createElement('a');
+      // link.classList.add('table-link');
+      // link.href = HORMONES_TABLE[i][3];
+      // link.target = '_blank';
+      // link.innerHTML = HORMONES_TABLE[i][3];
+      // cell4.appendChild(link);
+      row.appendChild(cell1);
+      row.appendChild(cell2);
+      row.appendChild(cell3);
+      // row.appendChild(cell4);
+      table.appendChild(row);
+    }
+  });
+</script>
+
+</html>

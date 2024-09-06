@@ -22,34 +22,33 @@
   <link rel="prefetch" href="/html/about.html">
   <link rel="prefetch" href="/html/expression.html">
   <link rel="prefetch" href="/html/enrichment.html">
-  <link rel="prefetch" href="/html/differential_exp.html">
+  <link rel="prefetch" href="/html/hormones.html">
   <link rel="prefetch" href="/html/advanced_analysis.html">
 </head>
 
 <body class="help">
   <header>
+    <div id="title-img">
+      <h1>ChemPerturbDB</h1>
+    </div>
     <nav>
       <div id="nav">
         <a href="/html/index.html">Home</a>
+        <a href="/html/hormones.html">Hormones</a>
         <a href="/html/expression.html">Expression</a>
         <a href="/html/enrichment.html">Enrichment</a>
-        <a href="/html/differential_exp.html">Differential Exp</a>
-        <a href="/html/advanced_analysis.html">Advanced Analysis</a>
+        <a href="/html/advanced_analysis.html">Adv Enrich Analysis</a>
         <a href="/html/help.html" class="current">Help</a>
         <a href="/html/about.html">About</a>
         <div class="blank"></div>
-        <!-- <img src="/imgs/logo.png"> -->
       </div>
     </nav>
-    <div id="title-img">
-      <h1>ChemicalDB</h1>
-    </div>
   </header>
   <main>
     <h1>Tutorials</h1>
     <p class="section-title">1. Introduction</p>
     <p class="mytext">
-      Navigation bar is on the top, including home page, expression page, enrichment page, <span class="delete">differential expression page</span>, help page and about page. You can click the corresponding link to enter the page you want to visit.
+      Navigation bar is on the top, including home page, expression page, enrichment page, help page and about page. You can click the corresponding link to enter the page you want to visit.
     </p>
     <p class="mytext">
       <a href="/html/index.html">Home page:</a> The main page of the website, which provides a brief introduction of the website and the database, and a chatting box with our AI assistant.
@@ -58,16 +57,13 @@
       <a href="/html/expression.html">Expression page:</a> The page for you to visualize the expression of a single gene, or multiple genes. You can see the violin plot of a single gene, or the comparison of multiple genes in a dot plot.
     </p>
     <p class="mytext">
-      <a href="/html/enrichment.html">Enrichment page:</a> This page is to show the enrichment of several pathways, including beta cell pathways, cell death pathways, specific pathways, and also customised pathways with your own gene list.
-    </p>
-    <p class="mytext delete">
-      <a href="/html/differential_exp.html" class="delete">Differential expression page:</a> This page will be changed later.
+      <a href="/html/enrichment.html">Enrichment page:</a> This page is to show the enrichment of several pathways, including beta cell pathways, cell death pathways, specific pathways.
     </p>
     <p class="mytext">
-      <a href="/html/advanced_analysis.html">Advanced analysis page:</a> This page is for you to do the advanced analysis (correlation analysis) for you customized set of genes. 
+      <a href="/html/advanced_analysis.html">Advanced enrichment analysis page:</a> This page is to show the enrichment of customised pathways, which is defined by a set of genes.
     </p>
     <p class="mytext last">
-      There is also <a href="/html/help.html">Help page</a> and <a href="/html/about.html">About page</a> to show the tutorials and basic information of this website.
+      There is also <a href="/html/help.html">Help page</a> and <a href="/html/about.html">About page</a> to show the tutorials and basic information of this website, and <a href="/html/hormones.html">Hormones page</a> to show the information of hormones.
     </p>
     <p class="section-title">2. Expression</p>
     <p class="mytext">
@@ -94,9 +90,9 @@
     <p class="section-title">3. Enrichment</p>
     <p class="mytext">
       This page is to show the enrichment plot of several pathways, including beta cell pathways, cell death pathways, specific pathways, and also customised pathways with your own gene list.
-      First you need to select one of the four options (Beta cell pathways, Cell death pathways, Specific pathways, Customised pathways) on the left side.
+      First you need to select one of the three options (Beta cell pathways, Cell death pathways, Specific pathways) on the left side.
     </p>
-    <img src="/imgs/enrich1.png" class="myimg">
+    <img src="/imgs/enrich6.png" class="myimg">
     <p class="sub-title">(1) Beta cell pathways</p>
     <p class="mytext">
       Click "Select a pathway" button, and then select a pathway from the dropdown menu. Then click "Submit", the enrichment of it will be displayed later.
@@ -113,23 +109,9 @@
       Then click "Submit", the enrichment of it will be displayed later.
     </p>
     <img src="/imgs/enrich4.png" class="myimg">
-    <p class="sub-title">(4) Customised pathways</p>
+    <p class="section-title">4. Advanced Enrichment Analysis</p>
     <p class="mytext">
-      In this part, a pathway is constructed by a set of genes. You can use several genes to define your own pathway. But note that not all combinations of genes are valid, and you need to input at least 5 genes.
-    </p>
-    <p class="mytext">
-      Input the gene ids in the textbox, separated by space, comma, or new line, 
-      and then click "Submit" button. 
-      Gene ids should look like INS, TOP2A, PDX1, AL691432.2, etc. (case insensitive)
-      After several seconds, the enrichment of these genes will be displayed.
-    </p>
-    <p class="mytext">
-      When you are typing, it will show how many of your inputted genes are valid, like the following image, you can only submit if all of them are valid.
-    </p>
-    <img src="/imgs/enrich5.png" class="myimg">
-    <p class="section-title">4. Advanced Analysis</p>
-    <p class="mytext">
-      This page is to do the correlation analysis for a set of genes.
+      This page is to show the enrichment of customised pathways, which is defined by a set of genes.
     </p>
     <p class="mytext">
       Input the gene ids in the textbox, separated by space, comma, or new line, 
@@ -137,10 +119,7 @@
       Gene ids should look like INS, TOP2A, PDX1, AL691432.2, etc. (case insensitive)
       After several seconds, the enrichment of these genes will be displayed.
     </p>
-    <p class="mytext">
-      When you are typing, it will show how many of your inputted genes are valid, like the following image, you can only submit if all of them are valid.
-    </p>
-    <img src="/imgs/aa2.png" class="myimg">
+    <img src="/imgs/gsea.png" class="myimg">
     <!-- <p class="section-title">5. Home page (chatting area)</p> -->
 
 
@@ -148,7 +127,7 @@
   </main>
   <footer>
     <p>
-      Copyright &copy; XXX 2024 All rights reserved.
+      Copyright &copy; Chen lab at Weill Cornell Medicine 2024 All rights reserved.
     </p>
   </footer>
 </body>

@@ -15,7 +15,7 @@ import subprocess
 from myHttp import http
 
 # SERVER = 'http://jtc1246.com:9020'
-SERVER = 'http://jtc1246.com:9020'
+SERVER = 'http://chemperturbdb.weill.cornell.edu/'
 
 
 NO_CACHE = 100000001
@@ -68,7 +68,7 @@ for js in jses:
 
 for img in imgs:
     tmp = img.lower()
-    if (not tmp.endswith('.png') and not tmp.endswith('.jpg') and not tmp.endswith('.jpeg')):
+    if (not tmp.endswith('.png') and not tmp.endswith('.jpg') and not tmp.endswith('.jpeg')  and not tmp.endswith('.gif')):
         continue
     registered.append(f'/imgs/{img}')
 
@@ -163,6 +163,8 @@ def process_html(request: Request, path: str) -> None:
             html = html.replace(reg, f'data:image/png;base64,{file}')
         if (reg.endswith('.jpg') or reg.endswith('.jpeg')):
             html = html.replace(reg, f'data:image/jpeg;base64,{file}')
+        if (reg.endswith('.gif')):
+            html = html.replace(reg, f'data:image/gif;base64,{file}')
     html = html.encode('utf-8')
     request.send_response(200)
     request.send_header('Connection', 'keep-alive')

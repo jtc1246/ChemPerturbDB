@@ -69,6 +69,10 @@ html {
     scrollbar-width: none;
 }
 
+html::-webkit-scrollbar {
+    display: none;
+}
+
 body::-webkit-scrollbar {
     display: none;
 }

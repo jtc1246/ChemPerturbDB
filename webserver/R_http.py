@@ -19,7 +19,7 @@ __all__ = [
 
 BASE_URL = 'http://127.0.0.1:2000'
 # BASE_URL = 'http://jtc1246.com:9020'
-RUN_R_LOCALLY = True
+RUN_R_LOCALLY = False
 
 command = '''
 cd ..
@@ -162,6 +162,7 @@ def customGSEA(name, csv_path, path):
 
 
 def degAnalysis(name1, name2, p_value, fc, csv_path, path):
+    return (False, b'Currently this function is disabled')
     # 测试了额外 3 个, 2 个可以, 1 个不行 (严格来说是3组, 每组control对应的两个hormone都测试了)
     # 随机更换了一些 p_value 和 fc, 没问题
     # ERROR: 'from' must be a finite number

@@ -25,7 +25,7 @@
   <link rel="prefetch" href="/html/about.html">
   <link rel="prefetch" href="/html/help.html">
   <link rel="prefetch" href="/html/expression.html">
-  <link rel="prefetch" href="/html/differential_exp.html">
+  <link rel="prefetch" href="/html/hormones.html">
   <link rel="prefetch" href="/html/advanced_analysis.html">
 </head>
 
@@ -35,22 +35,21 @@
     <a class="export-item" id="export-pdf">Export as PDF</a>
   </div>
   <header>
+    <div id="title-img">
+      <h1>ChemPerturbDB</h1>
+    </div>
     <nav>
       <div id="nav">
         <a href="/html/index.html">Home</a>
+        <a href="/html/hormones.html">Hormones</a>
         <a href="/html/expression.html">Expression</a>
         <a href="/html/enrichment.html" class="current">Enrichment</a>
-        <a href="/html/differential_exp.html">Differential Exp</a>
-        <a href="/html/advanced_analysis.html">Advanced Analysis</a>
+        <a href="/html/advanced_analysis.html">Adv Enrich Analysis</a>
         <a href="/html/help.html">Help</a>
         <a href="/html/about.html">About</a>
         <div class="blank"></div>
-        <!-- <img src="/imgs/logo.png"> -->
       </div>
     </nav>
-    <div id="title-img">
-      <h1>ChemicalDB</h1>
-    </div>
   </header>
   <main id="main">
     <div id="selection">
@@ -58,7 +57,7 @@
       <div class="menu-items" id="beta"><p>Beta cell specific<br>pathways</p></div>
       <div class="menu-items" id="death"><p>Cell death<br>pathways</p></div>
       <div class="menu-items" id="specific"><p>Specific<br>pathways</p></div>
-      <div class="menu-items" id="customized"><p>Customized<br>pathways</p></div>
+      <div class="menu-items" id="customized" style="display: none;"><p>Customized<br>pathways</p></div>
       <div id="nothing"></div>
     </div>
     <div id="ph"></div>
@@ -72,7 +71,6 @@
         <div id="b1-content" class="dropdown-content">
           <a id="bcp">Beta cell proliferation</a>
           <a id="bcf">Beta cell function</a>
-          <a id="bci">Beta cell identity</a>
         </div>
       </div>
       <div id="b2" class="dropdown">
@@ -83,9 +81,7 @@
         <div id="b2-content" class="dropdown-content">
           <a id="d1">Apoptosis</a>
           <a id="d2">Autophagy</a>
-          <a id="d3">Ferroptosis Signaling Pathway</a>
-          <a id="d4">Necroptosis</a>
-          <a id="d5">Pyroptosis Signaling Pathway</a>
+          <a id="d3">Necroptosis</a>
           <!-- <a id="d6">Hormone</a>
           <a id="d7">Sample</a> -->
         </div>
@@ -112,15 +108,20 @@
       <textarea id="pathway-textbox" placeholder="Your gene IDs here"></textarea>
       <p id="input-msg"></p>
       <button id="launch">Submit</button>
-      <p id="error-msg"></p>
+      <!-- <p id="error-msg"></p> -->
     </div>
     <div id="img-wrapper">
       <img id="middle-img" src="">
+      <p id="error-msg">Test error message.</p>
+      <div id="loading">
+        <img src="/imgs/loading-gif.gif">
+        <p>Loading ...</p>
+      </div>
     </div>
   </main>
   <footer>
     <p>
-      Copyright &copy; XXX 2024 All rights reserved.
+      Copyright &copy; Chen lab at Weill Cornell Medicine 2024 All rights reserved.
     </p>
   </footer>
 </body>

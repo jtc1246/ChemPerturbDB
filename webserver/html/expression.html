@@ -24,7 +24,7 @@
   <link rel="prefetch" href="/html/about.html">
   <link rel="prefetch" href="/html/help.html">
   <link rel="prefetch" href="/html/enrichment.html">
-  <link rel="prefetch" href="/html/differential_exp.html">
+  <link rel="prefetch" href="/html/hormones.html">
   <link rel="prefetch" href="/html/advanced_analysis.html">
 </head>
 
@@ -34,24 +34,26 @@
     <a class="export-item" id="export-pdf">Export as PDF</a>
   </div>
   <header>
+    <div id="title-img">
+      <h1>ChemPerturbDB</h1>
+    </div>
     <nav>
       <div id="nav">
         <a href="/html/index.html">Home</a>
+        <a href="/html/hormones.html">Hormones</a>
         <a href="/html/expression.html" class="current">Expression</a>
         <a href="/html/enrichment.html">Enrichment</a>
-        <a href="/html/differential_exp.html">Differential Exp</a>
-        <a href="/html/advanced_analysis.html">Advanced Analysis</a>
+        <a href="/html/advanced_analysis.html">Adv Enrich Analysis</a>
         <a href="/html/help.html">Help</a>
         <a href="/html/about.html">About</a>
         <div class="blank"></div>
-        <!-- <img src="/imgs/logo.png"> -->
       </div>
     </nav>
-    <div id="title-img">
-      <h1>ChemicalDB</h1>
-    </div>
   </header>
   <main>
+    <p id="intro-text">
+      Show the expression of a single gene or multiple genes. First click "Gene" or "Multiple genes". Then enter the gene ID(s). For more information, see <a href="/html/help.html">Help page</a>.
+    </p>
     <div id="selection">
       <label class="two-one"> <!-- the usage of label is to make the whole area selectable -->
         <div class="b1"></div>
@@ -108,10 +110,15 @@
         </div>
       </div>
     </div>
-    <p id="error-msg"></p>
+    <!-- <p id="error-msg"></p> -->
     <div id="results">
       <div id="left" style="width:99%;">
         <img id="left-img" src="">
+        <p id="error-msg">Test error message.</p>
+        <div id="loading">
+          <img src="/imgs/loading-gif.gif">
+          <p>Loading ...</p>
+        </div>
       </div>
       <div id="empty" style="width:0;"></div>
       <div id="right" style="width:0;">
@@ -121,7 +128,7 @@
   </main>
   <footer>
     <p>
-      Copyright &copy; XXX 2024 All rights reserved.
+      Copyright &copy; Chen lab at Weill Cornell Medicine 2024 All rights reserved.
     </p>
   </footer>
 </body>

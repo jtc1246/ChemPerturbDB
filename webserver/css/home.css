@@ -27,7 +27,7 @@
     width: 3%;
 }
 
-#intro-text {
+#intro-text-2 {
     text-align: left !important;
     line-height: 1.35 !important;
 }
@@ -37,7 +37,7 @@ table * {
 }
 
 table {
-    width: 100%;
+    width: 70%;
     border-collapse: collapse;
     margin-bottom: 1.5vw;
 }
@@ -54,7 +54,7 @@ th, td {
 }
 
 .table-t1 {
-    width: 30%;
+    width: 42.86%;
     vertical-align: top;
 }
 
@@ -63,7 +63,7 @@ th, td {
 }
 
 .table-t2 {
-    width: 40%;
+    width: 57.14%;
     vertical-align: top;
 }
 
@@ -115,13 +115,14 @@ html {
     text-align: center;
     font-size: 1.5vw;
     line-height: 1;
-    height: 1.5vw;
+    height: 1.8vw;
 }
 
 #chat-messages {
     height: calc(var(--actual-vh) - 16.125vw);
     max-height: 60.5vw;
     width: 100%;
+    border-radius: 0.5vw;
     /* background-color: paleturquoise; */
 }
 
@@ -137,7 +138,7 @@ html {
     border: 0;
     height: 2.5vw;
     outline: 0;
-    width: 75%;
+    width: 82.5%;
     caret-color: #3478F6;
     font-size: 1.25vw;
     border-radius: 0.5vw;
@@ -218,6 +219,58 @@ html {
     background-color: #0037fe;
     color: #fff;
     line-height: 1;
+    display: none;
+}
+
+#start-new-conversation-wrapper {
+    position: absolute;
+    left: 92.5vw;
+    top: 9.75vw;
+    z-index: 50;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    width: 6.5vw;
+    height: 1.7vw;
+    background-color: yellow;
+    box-sizing: content-box;
+    padding: 0.2vw;
+    border-radius: 0.5vw;
+    background-color: #c7f4b7;
+    /* left: 36.5vw; */
+}
+
+#start-new-conversation {
+    overflow: visible;
+    font-size: 1vw;
+    text-align: center;
+    line-height: 0.85;
+    color: inherit !important;
+}
+
+#start-new-conversation-wrapper:hover {
+    cursor: pointer;
+    background-color: #b3f09d;
+}
+
+#start-new-conversation-wrapper:active {
+    cursor: pointer;
+    background-color: rgb(168, 241, 141);
+}
+
+/* TODO: color of locked */
+
+#start-new-conversation-wrapper.locked:hover {
+    cursor: not-allowed;
+    background-color: #ddf3d5;
+    color: #666 !important;
+}
+
+#start-new-conversation-wrapper.locked {
+    background-color: #ddf3d5;
+    color: #666 !important;
 }
 
 #clear-history:hover {
@@ -347,7 +400,7 @@ main {
     background-color: rgba(0, 0, 0, 0.8);
     margin-left: -0.6vw;
     margin-right: -0.6vw;
-    margin-top: -0.6vw;
+    /* margin-top: -0.6vw; */
 }
 
 #full-screen-image img {
@@ -393,4 +446,21 @@ main {
 
 #chat-messages  {
     display: none;
+}
+
+#title-bold {
+    display: inline-block;
+    font-size: inherit;
+    line-height: inherit;
+    font-family: inherit;
+    font-weight: 600;
+    vertical-align: bottom;
+}
+
+#no-padding {
+    /* padding: 0 !important; */
+    font-size: 1.15vw !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    line-height: 1.3043;
 }

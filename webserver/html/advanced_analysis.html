@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Advanced Analysis</title>
+  <title>CustomGSEA</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -25,7 +25,7 @@
   <link rel="prefetch" href="/html/help.html">
   <link rel="prefetch" href="/html/expression.html">
   <link rel="prefetch" href="/html/enrichment.html">
-  <link rel="prefetch" href="/html/differential_exp.html">
+  <link rel="prefetch" href="/html/hormones.html">
 </head>
 
 <body class="advanced-analysis">
@@ -34,45 +34,52 @@
     <a class="export-item" id="export-pdf">Export as PDF</a>
   </div>
   <header>
+    <div id="title-img">
+      <h1>ChemPerturbDB</h1>
+    </div>
     <nav>
       <div id="nav">
         <a href="/html/index.html">Home</a>
+        <a href="/html/hormones.html">Hormones</a>
         <a href="/html/expression.html">Expression</a>
         <a href="/html/enrichment.html">Enrichment</a>
-        <a href="/html/differential_exp.html">Differential Exp</a>
-        <a href="/html/advanced_analysis.html" class="current">Advanced Analysis</a>
+        <a href="/html/advanced_analysis.html" class="current">Adv Enrich Analysis</a>
         <a href="/html/help.html">Help</a>
         <a href="/html/about.html">About</a>
         <div class="blank"></div>
-        <!-- <img src="/imgs/logo.png"> -->
       </div>
     </nav>
-    <div id="title-img">
-      <h1>ChemicalDB</h1>
-    </div>
   </header>
   <main>
-    <p id="pathway-input-title">Implications of Customized Geneset by Chemicals</p>
+    <p id="intro-text">
+      Show the enrichment of customized pathways (with a set of genes). Input the gene ids in the textbox, separated by space, comma, or new line. Gene ids should look like INS, TOP2A, PDX1, AL691432.2, etc. (case insensitive)&nbsp;&nbsp;&nbsp;For more information, see <a href="/html/help.html">Help page</a>.
+    </p>
+    <p id="pathway-input-title">Your customized pathway</p>
     <div id="input-wrapper">
       <!-- <input type="text" id="pathway-textbox"> -->
       <textarea id="pathway-textbox" placeholder="Your gene IDs here"></textarea>
       <button id="launch">Launch</button>
       <div id="msg-wrapper">
-        <p id="input-msg"></p>
+        <p id="input-msg" style="display: none;"></p>
       </div>
     </div>
-    <p id="error-msg"></p>
+    <!-- <p id="error-msg"></p> -->
     <div id="results">
       <div id="empty1" style="width:10%;"></div>
       <div id="middle" style="width:70%;">
         <img id="middle-img" src="">
+        <p id="error-msg">Test error message.</p>
+        <div id="loading">
+          <img src="/imgs/loading-gif.gif">
+          <p>Loading ...</p>
+        </div>
       </div>
       <div id="empty2" style="width:20%;"></div>
     </div>
   </main>
   <footer>
     <p>
-      Copyright &copy; XXX 2024 All rights reserved.
+      Copyright &copy; Chen lab at Weill Cornell Medicine 2024 All rights reserved.
     </p>
   </footer>
 </body>
